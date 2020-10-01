@@ -1,7 +1,7 @@
 import numpy as np
 backtracks = 0
 
-
+#input
 input = [[5, 1, 7, 6, 0, 0, 0, 3, 4],
          [2, 8, 9, 0, 0, 4, 0, 0, 0],
          [3, 4, 6, 2, 0, 5, 0, 9, 0],
@@ -36,7 +36,7 @@ def isValid(grid, x, y, n):
                 return False
     return True
         
-
+#solve
 def solve(grid, x=0, y=0):
     global backtracks
     x, y = findNextCellToFill(grid)
@@ -50,3 +50,4 @@ def solve(grid, x=0, y=0):
             backtracks+=1
             grid[x][y]=0
     return False
+#end of code
